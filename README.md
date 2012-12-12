@@ -40,6 +40,7 @@ class EscenaDeJuego(pilas.escena.Base):
         def crear_mapa():
             mapa = pilas.actores.Mapa(filas=15, columnas=20)
             #...........Grilla...........
+            
             grilla = pilas.imagenes.cargar_grilla("grillas/plataformas_10_10.png", 10, 10)
             grilla.x = 200
             grilla.y = 200
@@ -100,7 +101,8 @@ class EscenaDeJuego(pilas.escena.Base):
             
             return mapa      
 
-        #..........Actor.........        
+        #..........Actor.........
+        
         mapa = crear_mapa()
         actor = pilas.actores.Martian(mapa)
         actor.y = -180
@@ -110,6 +112,7 @@ class EscenaDeJuego(pilas.escena.Base):
         pilas.fondos.Tarde()
 
         #..........Temporzador..........
+        
         t = pilas.actores.Temporizador()
         t.x = -300
         t.y = 220
@@ -119,6 +122,7 @@ class EscenaDeJuego(pilas.escena.Base):
         t.iniciar()
 
         #..........puntaje........
+        
         puntaje = pilas.actores.Puntaje()
         texto = pilas.actores.Texto('Puntaje:')
         texto.x = 200
@@ -127,6 +131,7 @@ class EscenaDeJuego(pilas.escena.Base):
         puntaje.y = 220
 
         #..........Monedas..........
+        
         moneda01 = pilas.actores.Moneda()
         moneda01.x = -200
         moneda01.y = -80
